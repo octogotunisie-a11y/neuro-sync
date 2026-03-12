@@ -4578,20 +4578,20 @@
         <div id="autoregulation" class="screen">
             <div class="page">
                 <div class="sh">
-                    <div class="sh-eyebrow">NEUROSCIENCES SOCIALES · PERCEPTION FACIALE</div>
+                    <div class="sh-eyebrow">NEUROSCIENCES SOCIALES · PERCEPTION FACIALE & VOCALE</div>
                     <h2 class="sh-title">Auto-régulation &<br><em>perception sociale</em></h2>
-                    <p class="sh-sub">Comprendre les mécanismes de la perception faciale, les indices d'incompétence perçue et les micro-comportements correcteurs pour réguler ses interactions.</p>
+                    <p class="sh-sub">Comprendre les mécanismes de la perception faciale et vocale, les indices d'incompétence perçue et les micro-comportements correcteurs pour réguler ses interactions.</p>
                 </div>
 
-                <!-- Mini-barre de navigation avec 5 étapes -->
+                <!-- Mini-barre de navigation avec 5 étapes (micro-signaux fusionné dans visages) -->
                 <div class="protocole-tabs" style="margin-bottom: 40px; display: flex; flex-wrap: wrap;">
                     <button class="protocole-tab active" onclick="showAutoRegSection('etapes', this)">01 · Les 4 étapes</button>
-                    <button class="protocole-tab" onclick="showAutoRegSection('visages', this)">02 · Les deux visages</button>
+                    <button class="protocole-tab" onclick="showAutoRegSection('visages', this)">02 · Les deux visages </button>
                     <button class="protocole-tab" onclick="showAutoRegSection('voix', this)">03 · La voix</button>
-                    <button class="protocole-tab" onclick="showAutoRegSection('signaux', this)">04 · 5 Micro-signaux</button>
-                    <button class="protocole-tab" onclick="showAutoRegSection('indices', this)">05 · Indices d'incompétence</button>
-                    <button class="protocole-tab" onclick="showAutoRegSection('correcteurs', this)">06 · Correcteurs ≤5s</button>
+                    <button class="protocole-tab" onclick="showAutoRegSection('indices', this)">04 · Indices d'incompétence</button>
+                    <button class="protocole-tab" onclick="showAutoRegSection('correcteurs', this)">05 · Correcteurs ≤5s</button>
                 </div>
+
                 <!-- SECTION 1: LES 4 ÉTAPES DE RÉGULATION (RELA²) -->
                 <div id="auto-etapes" class="protocole-section active">
                     <div class="sh-mini">
@@ -4692,7 +4692,7 @@
                     </div>
                 </div>
 
-                <!-- SECTION 2: LES DEUX VISAGES -->
+                <!-- SECTION 2: LES DEUX VISAGES + 5 MICRO-SIGNAUX (FUSIONNÉS) -->
                 <div id="auto-visages" class="protocole-section">
                     <!-- Meta header -->
                     <div class="meta-header">
@@ -4717,19 +4717,21 @@
 
                     <!-- Epigraph -->
                     <div class="epigraph">
-                        <strong>Note épistémologique :</strong> Les deux configurations ci-dessous représentent des <strong>heuristiques sociales rapides</strong> — des raccourcis cognitifs, non des mesures de compétence réelle. La corrélation observée
-                        entre apparence et performance reste faible (Todorov, Princeton). Ces illustrations visent à <strong>identifier les biais perceptifs pour les corriger</strong>, pas à juger les individus.
+                        <strong>Note épistémologique :</strong> Les configurations ci-dessous représentent des <strong>heuristiques sociales rapides</strong> — des raccourcis cognitifs, non des mesures de compétence réelle. La corrélation observée entre
+                        apparence et performance reste faible (Todorov, Princeton). Ces illustrations visent à <strong>identifier les biais perceptifs pour les corriger</strong>, pas à juger les individus.
                     </div>
-                    <div style="margin-top: 60px; text-align: center;">
+
+                    <!-- Images des deux visages -->
+                    <div style="margin-top: 30px; text-align: center;">
                         <div style="display: inline-flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
                             <div class="auto-image-wrapper" onclick="openFullImage('auto-image-1')">
                                 <img src="auto/1.jpeg" alt="Configuration faciale 1" class="auto-image" id="auto-image-1">
                                 <div class="auto-image-overlay-center">🔍</div>
                             </div>
-
                         </div>
                         <p style="color: var(--text-muted); font-size: 13px; margin-top: 20px; font-style: italic;">Cliquez sur les images pour agrandir</p>
                     </div>
+
                     <!-- PLATES AVEC VISAGES COMPLETS -->
                     <div class="plates">
                         <!-- PLATE A - HAUTE COMPÉTENCE -->
@@ -4746,7 +4748,7 @@
                                 </div>
                             </div>
 
-                            <!-- FACE SVG COMPÉTENCE (original) -->
+                            <!-- FACE SVG COMPÉTENCE -->
                             <div class="face-area">
                                 <svg width="320" height="400" viewBox="0 0 360 440">
                             <defs>
@@ -4880,7 +4882,7 @@
                                 </div>
                             </div>
 
-                            <!-- FACE SVG INCOMPÉTENCE (original) -->
+                            <!-- FACE SVG INCOMPÉTENCE -->
                             <div class="face-area">
                                 <svg width="320" height="400" viewBox="0 0 360 440">
                             <defs>
@@ -5045,224 +5047,11 @@
                         </div>
                     </div>
 
-                    <!-- Galerie d'images -->
-                    <!-- IMPLICATIONS CARD -->
-                    <div class="implications">
-                        <div class="implications-title">🧠 Implications pour l'autorégulation</div>
-                        <ul class="implications-list">
-                            <li>Reconnaître que votre jugement spontané peut être influencé par ces signaux</li>
-                            <li>Suspendre le verdict automatique pour laisser place à l'analyse</li>
-                            <li>Rechercher des informations complémentaires qui contredisent la première impression</li>
-                            <li>Pratiquer la Couche 0 pour réguler votre propre système nerveux</li>
-                            <li>Observer ces signaux chez vous-même pour ajuster votre communication</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- SECTION 3: LA VOIX (NOUVEAU CONTENU DU DOCUMENT WORD) -->
-                <div id="auto-voix" class="protocole-section">
-                    <div class="sh-mini">
-                        <div class="sh-mini-num">03</div>
-                        <div class="sh-mini-content">
-                            <div class="sh-mini-tag">NEUROSCIENCES VOCALES</div>
-                            <div class="sh-mini-title">Autorégulation de la <em>voix en appel</em></div>
-                            <div class="sh-mini-sub">Réguler sa voix en temps réel pour apaiser les tensions et corriger les prédictions erronées (modèle du cerveau prédictif / énergie libre).</div>
-                        </div>
-                    </div>
-
-                    <!-- Introduction -->
-                    <div class="g2" style="margin-bottom: 36px;">
-                        <div class="card card-md">
-                            <h4 style="color: var(--primary); margin-bottom: 16px;">🧠 Cerveau prédictif & voix</h4>
-                            <p>Notre cerveau génère des <strong>prédictions</strong> sur les intentions de l'autre. Une voix trop forte ou hésitante peut être interprétée comme agressive ou incertaine → augmentation de l'<strong>énergie libre</strong> (écart
-                                prédiction/réalité) → anxiété, escalade.</p>
-                        </div>
-                        <div class="card card-md">
-                            <h4 style="color: var(--accent-1); margin-bottom: 16px;">🫁 Système vagal ventral</h4>
-                            <p>En régulant <strong>respiration, volume, ton, débit</strong> et <strong>langage positif</strong>, on active le système vagal ventral (calme & connexion sociale). Cela diminue le stress et corrige les erreurs de prédiction.</p>
-                        </div>
-                    </div>
-
-                    <!-- Image du document Word -->
-                    <div style="text-align: center; margin-bottom: 30px;">
-                        <div class="auto-image-wrapper" onclick="openFullImage('voice-doc-image')" style="width: 100%; max-width: 800px; margin: 0 auto; height: auto;">
-                            <img src="auto/2.jpeg" alt="Document autorégulation vocale" id="voice-doc-image" style="width: 100%; height: auto; border-radius: var(--radius-lg);">
-                            <div class="auto-image-overlay-center">🔍</div>
-                        </div>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-top: 10px; font-style: italic;">
-                            Document : Autorégulation de la Voix pendant une Conversation Téléphonique
-                        </p>
-                    </div>
-
-                    <!-- Timeline avant/pendant/après -->
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px;">
-                        <div class="card" style="padding: 20px; text-align: center; border-top: 4px solid var(--primary);">
-                            <div style="font-size: 24px; margin-bottom: 10px;">🔹 Avant</div>
-                            <div style="font-weight: 600; margin-bottom: 8px;">Préparation</div>
-                            <div style="font-size: 13px; color: var(--text-muted);">Respiration 4-6 pour ancrer le calme</div>
-                        </div>
-                        <div class="card" style="padding: 20px; text-align: center; border-top: 4px solid var(--secondary);">
-                            <div style="font-size: 24px; margin-bottom: 10px;">🔸 Pendant</div>
-                            <div style="font-weight: 600; margin-bottom: 8px;">Ajustement temps réel</div>
-                            <div style="font-size: 13px; color: var(--text-muted);">Surveiller volume, ton, débit</div>
-                        </div>
-                        <div class="card" style="padding: 20px; text-align: center; border-top: 4px solid var(--accent-1);">
-                            <div style="font-size: 24px; margin-bottom: 10px;">🔹 Après</div>
-                            <div style="font-weight: 600; margin-bottom: 8px;">Débrief</div>
-                            <div style="font-size: 13px; color: var(--text-muted);">Analyser les écarts pour réduire erreurs futures</div>
-                        </div>
-                    </div>
-
-                    <!-- TABLEAU DE RÉGULATION VOCALE (complet) -->
-                    <div class="sh-mini" style="margin-bottom: 20px;">
-                        <div class="sh-mini-tag">GUIDE COMPLET</div>
-                        <div class="sh-mini-title">Tableau d'<em>autorégulation vocale</em></div>
-                    </div>
-
-                    <div class="matrix-container" style="overflow-x: auto;">
-                        <table class="matrix" style="min-width: 1000px;">
-                            <thead>
-                                <tr>
-                                    <th>Étape</th>
-                                    <th>Composante</th>
-                                    <th>Techniques</th>
-                                    <th>À éviter (Risques)</th>
-                                    <th>Optimaux (Bénéfices)</th>
-                                    <th>Impact Tensions/Prédictions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>1. Préparation</strong></td>
-                                    <td>Respiration</td>
-                                    <td>Inspirer 4s, expirer 6s (3 cycles)</td>
-                                    <td>Courte/saccadée → stress</td>
-                                    <td>Profonde/rythmée → calme</td>
-                                    <td>Active vagal, réduit énergie libre, ancre sérénité</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>2. Volume</strong></td>
-                                    <td>Maîtrisé</td>
-                                    <td>Cible : comme discussion calme à 1-2m (voix de café tranquille, TV volume moyen)</td>
-                                    <td>Trop fort → agressif ; trop faible → hésitant</td>
-                                    <td>Stable/posé → fiable</td>
-                                    <td>Évite malentendus, aligne attentes, diminue tensions</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>3. Ton</strong></td>
-                                    <td>Descendant/Stable</td>
-                                    <td>Fin de phrase descendante</td>
-                                    <td>Fort/fluctuant → instable</td>
-                                    <td>Descendant/posé → assuré</td>
-                                    <td>Corrige prédictions conflictuelles, apaise coopération</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>4. Débit</strong></td>
-                                    <td>Régulier</td>
-                                    <td>2-2,5 mots/seconde (comme présentateur TV calme). Pauses courtes.</td>
-                                    <td>Rapide → stress ; lent → manque d'assurance</td>
-                                    <td>Rythmé/respiré → crédible</td>
-                                    <td>Évite surcharge, synchronise, dissipe tensions</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>5. Langage</strong></td>
-                                    <td>Valence positive</td>
-                                    <td>Mots : solution, clarifier, ensemble</td>
-                                    <td>Négatifs (problème, impossible) → escalade</td>
-                                    <td>Positifs → confiance</td>
-                                    <td>Remplace négatif, réduit énergie libre, promeut résolution</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>6. Synthèse</strong></td>
-                                    <td>Profil Global</td>
-                                    <td>Combiner tout ; débrief post-appel</td>
-                                    <td>Incohérences → confusion</td>
-                                    <td>Cohérent → sécurité</td>
-                                    <td>Minimise énergie libre, transforme tensions en opportunités</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- GESTION DES SILENCES -->
+                    <!-- SECTION 5 MICRO-SIGNAUX (INTÉGRÉE DANS LES DEUX VISAGES) -->
                     <div class="sh-mini" style="margin: 40px 0 20px;">
-                        <div class="sh-mini-tag">GESTION DES SILENCES</div>
-                        <div class="sh-mini-title">Le silence <em>bien dosé</em> apaise</div>
-                    </div>
-
-                    <div class="matrix-container" style="overflow-x: auto;">
-                        <table class="matrix" style="min-width: 800px;">
-                            <thead>
-                                <tr>
-                                    <th>Situation (Quand)</th>
-                                    <th>Durée Recommandée</th>
-                                    <th>Relance Après Silence</th>
-                                    <th>Impact sur Tensions/Prédictions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Après une question ouverte</td>
-                                    <td>3-5 secondes</td>
-                                    <td>"Prenez votre temps" ou reformuler</td>
-                                    <td>Donne espace pour réflexion, réduit pression, corrige prédictions hâtives</td>
-                                </tr>
-                                <tr>
-                                    <td>Face à une tension montante</td>
-                                    <td>2-4 secondes</td>
-                                    <td>"Je comprends votre point" puis relancer</td>
-                                    <td>Apaise émotions, active écoute, minimise énergie libre</td>
-                                </tr>
-                                <tr>
-                                    <td>Pour clarifier un point complexe</td>
-                                    <td>4-6 secondes</td>
-                                    <td>"Si je comprends bien…" suivi de question</td>
-                                    <td>Favorise précision, évite malentendus, renforce coopération</td>
-                                </tr>
-                                <tr>
-                                    <td>Après un aveu ou feedback sensible</td>
-                                    <td>5-7 secondes</td>
-                                    <td>"Merci de partager cela" puis "Comment avancer ?"</td>
-                                    <td>Bâtit confiance, corrige erreurs prédictives négatives</td>
-                                </tr>
-                                <tr>
-                                    <td>En fin de phrase pour emphase</td>
-                                    <td>1-3 secondes</td>
-                                    <td>"Et vous ?" ou question ouverte</td>
-                                    <td>Crée rythme naturel, évite surcharge, dissipe tensions</td>
-                                </tr>
-                                <tr>
-                                    <td>Silence prolongé inattendu</td>
-                                    <td>Adapter (max 10s)</td>
-                                    <td>"Êtes-vous toujours là ?" ou relancer sujet</td>
-                                    <td>Maintient flux, réduit anxiété, optimise sécurité relationnelle</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Récapitulatif neuro -->
-                    <div class="result-card" style="margin-top: 36px;">
-                        <div class="result-arrow">🎯</div>
-                        <div class="result-content">
-                            <div class="result-label">SYNTHÈSE NEUROLOGIQUE</div>
-                            <div class="result-text">Voix stable + ton descendant + silences dosés = activation vagale, réduction de l'énergie libre, coopération mutuelle.</div>
-                            <div class="result-sub">La voix devient un outil de sécurité relationnelle, pas seulement de communication.</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- SECTION 4: 5 MICRO-SIGNAUX -->
-                <div id="auto-signaux" class="protocole-section">
-                    <div class="sh-mini">
-                        <div class="sh-mini-num">04</div>
-                        <div class="sh-mini-content">
-                            <div class="sh-mini-tag">Perception de compétence</div>
-                            <div class="sh-mini-title">Les <em>5 micro-signaux</em> de compétence perçue</div>
-                            <div class="sh-mini-sub">Ces signaux sont détectés en 100–300 ms. Ils ne reflètent pas la compétence réelle, mais influencent fortement la confiance initiale.</div>
-                        </div>
-                        <div class="sh-mini-time">
-                            <div class="sh-mini-time-label">Détection</div>
-                            <div class="sh-mini-time-value">100 ms</div>
-                        </div>
+                        <div class="sh-mini-tag">COMPLÉMENT</div>
+                        <div class="sh-mini-title">Les <em>5 micro-signaux</em> de compétence perçue</div>
+                        <div class="sh-mini-sub">Ces signaux sont détectés en 100–300 ms. Ils ne reflètent pas la compétence réelle, mais influencent fortement la confiance initiale.</div>
                     </div>
 
                     <div class="signal-grid">
@@ -5424,12 +5213,217 @@
                             <div class="signal-stat-value">Élevé</div>
                         </div>
                     </div>
+
+                    <!-- IMPLICATIONS CARD -->
+                    <div class="implications">
+                        <div class="implications-title">🧠 Implications pour l'autorégulation</div>
+                        <ul class="implications-list">
+                            <li>Reconnaître que votre jugement spontané peut être influencé par ces signaux</li>
+                            <li>Suspendre le verdict automatique pour laisser place à l'analyse</li>
+                            <li>Rechercher des informations complémentaires qui contredisent la première impression</li>
+                            <li>Pratiquer la Couche 0 pour réguler votre propre système nerveux</li>
+                            <li>Observer ces signaux chez vous-même pour ajuster votre communication</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- SECTION 5: INDICES D'INCOMPÉTENCE (copié du protocole) -->
+                <!-- SECTION 3: LA VOIX -->
+                <div id="auto-voix" class="protocole-section">
+                    <div class="sh-mini">
+                        <div class="sh-mini-num">03</div>
+                        <div class="sh-mini-content">
+                            <div class="sh-mini-tag">NEUROSCIENCES VOCALES</div>
+                            <div class="sh-mini-title">Autorégulation de la <em>voix en appel</em></div>
+                            <div class="sh-mini-sub">Réguler sa voix en temps réel pour apaiser les tensions et corriger les prédictions erronées (modèle du cerveau prédictif / énergie libre).</div>
+                        </div>
+                    </div>
+
+                    <!-- Introduction -->
+                    <div class="g2" style="margin-bottom: 36px;">
+                        <div class="card card-md">
+                            <h4 style="color: var(--primary); margin-bottom: 16px;">🧠 Cerveau prédictif & voix</h4>
+                            <p>Notre cerveau génère des <strong>prédictions</strong> sur les intentions de l'autre. Une voix trop forte ou hésitante peut être interprétée comme agressive ou incertaine → augmentation de l'<strong>énergie libre</strong> (écart
+                                prédiction/réalité) → anxiété, escalade.</p>
+                        </div>
+                        <div class="card card-md">
+                            <h4 style="color: var(--accent-1); margin-bottom: 16px;">🫁 Système vagal ventral</h4>
+                            <p>En régulant <strong>respiration, volume, ton, débit</strong> et <strong>langage positif</strong>, on active le système vagal ventral (calme & connexion sociale). Cela diminue le stress et corrige les erreurs de prédiction.</p>
+                        </div>
+                    </div>
+
+                    <!-- Image du document Word -->
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <div class="auto-image-wrapper" onclick="openFullImage('voice-doc-image')" style="width: 100%; max-width: 800px; margin: 0 auto; height: auto;">
+                            <img src="auto/2.jpeg" alt="Document autorégulation vocale" id="voice-doc-image" style="width: 100%; height: auto; border-radius: var(--radius-lg);">
+                            <div class="auto-image-overlay-center">🔍</div>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 13px; margin-top: 10px; font-style: italic;">
+                            Document : Autorégulation de la Voix pendant une Conversation Téléphonique
+                        </p>
+                    </div>
+
+                    <!-- Timeline avant/pendant/après -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px;">
+                        <div class="card" style="padding: 20px; text-align: center; border-top: 4px solid var(--primary);">
+                            <div style="font-size: 24px; margin-bottom: 10px;">🔹 Avant</div>
+                            <div style="font-weight: 600; margin-bottom: 8px;">Préparation</div>
+                            <div style="font-size: 13px; color: var(--text-muted);">Respiration 4-6 pour ancrer le calme</div>
+                        </div>
+                        <div class="card" style="padding: 20px; text-align: center; border-top: 4px solid var(--secondary);">
+                            <div style="font-size: 24px; margin-bottom: 10px;">🔸 Pendant</div>
+                            <div style="font-weight: 600; margin-bottom: 8px;">Ajustement temps réel</div>
+                            <div style="font-size: 13px; color: var(--text-muted);">Surveiller volume, ton, débit</div>
+                        </div>
+                        <div class="card" style="padding: 20px; text-align: center; border-top: 4px solid var(--accent-1);">
+                            <div style="font-size: 24px; margin-bottom: 10px;">🔹 Après</div>
+                            <div style="font-weight: 600; margin-bottom: 8px;">Débrief</div>
+                            <div style="font-size: 13px; color: var(--text-muted);">Analyser les écarts pour réduire erreurs futures</div>
+                        </div>
+                    </div>
+
+                    <!-- TABLEAU DE RÉGULATION VOCALE -->
+                    <div class="sh-mini" style="margin-bottom: 20px;">
+                        <div class="sh-mini-tag">GUIDE COMPLET</div>
+                        <div class="sh-mini-title">Tableau d'<em>autorégulation vocale</em></div>
+                    </div>
+
+                    <div class="matrix-container" style="overflow-x: auto;">
+                        <table class="matrix" style="min-width: 1000px;">
+                            <thead>
+                                <tr>
+                                    <th>Étape</th>
+                                    <th>Composante</th>
+                                    <th>Techniques</th>
+                                    <th>À éviter (Risques)</th>
+                                    <th>Optimaux (Bénéfices)</th>
+                                    <th>Impact Tensions/Prédictions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1. Préparation</strong></td>
+                                    <td>Respiration</td>
+                                    <td>Inspirer 4s, expirer 6s (3 cycles)</td>
+                                    <td>Courte/saccadée → stress</td>
+                                    <td>Profonde/rythmée → calme</td>
+                                    <td>Active vagal, réduit énergie libre, ancre sérénité</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2. Volume</strong></td>
+                                    <td>Maîtrisé</td>
+                                    <td>Cible : comme discussion calme à 1-2m (voix de café tranquille, TV volume moyen)</td>
+                                    <td>Trop fort → agressif ; trop faible → hésitant</td>
+                                    <td>Stable/posé → fiable</td>
+                                    <td>Évite malentendus, aligne attentes, diminue tensions</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3. Ton</strong></td>
+                                    <td>Descendant/Stable</td>
+                                    <td>Fin de phrase descendante</td>
+                                    <td>Fort/fluctuant → instable</td>
+                                    <td>Descendant/posé → assuré</td>
+                                    <td>Corrige prédictions conflictuelles, apaise coopération</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4. Débit</strong></td>
+                                    <td>Régulier</td>
+                                    <td>2-2,5 mots/seconde (comme présentateur TV calme). Pauses courtes.</td>
+                                    <td>Rapide → stress ; lent → manque d'assurance</td>
+                                    <td>Rythmé/respiré → crédible</td>
+                                    <td>Évite surcharge, synchronise, dissipe tensions</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5. Langage</strong></td>
+                                    <td>Valence positive</td>
+                                    <td>Mots : solution, clarifier, ensemble</td>
+                                    <td>Négatifs (problème, impossible) → escalade</td>
+                                    <td>Positifs → confiance</td>
+                                    <td>Remplace négatif, réduit énergie libre, promeut résolution</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>6. Synthèse</strong></td>
+                                    <td>Profil Global</td>
+                                    <td>Combiner tout ; débrief post-appel</td>
+                                    <td>Incohérences → confusion</td>
+                                    <td>Cohérent → sécurité</td>
+                                    <td>Minimise énergie libre, transforme tensions en opportunités</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- GESTION DES SILENCES -->
+                    <div class="sh-mini" style="margin: 40px 0 20px;">
+                        <div class="sh-mini-tag">GESTION DES SILENCES</div>
+                        <div class="sh-mini-title">Le silence <em>bien dosé</em> apaise</div>
+                    </div>
+
+                    <div class="matrix-container" style="overflow-x: auto;">
+                        <table class="matrix" style="min-width: 800px;">
+                            <thead>
+                                <tr>
+                                    <th>Situation (Quand)</th>
+                                    <th>Durée Recommandée</th>
+                                    <th>Relance Après Silence</th>
+                                    <th>Impact sur Tensions/Prédictions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Après une question ouverte</td>
+                                    <td>3-5 secondes</td>
+                                    <td>"Prenez votre temps" ou reformuler</td>
+                                    <td>Donne espace pour réflexion, réduit pression, corrige prédictions hâtives</td>
+                                </tr>
+                                <tr>
+                                    <td>Face à une tension montante</td>
+                                    <td>2-4 secondes</td>
+                                    <td>"Je comprends votre point" puis relancer</td>
+                                    <td>Apaise émotions, active écoute, minimise énergie libre</td>
+                                </tr>
+                                <tr>
+                                    <td>Pour clarifier un point complexe</td>
+                                    <td>4-6 secondes</td>
+                                    <td>"Si je comprends bien…" suivi de question</td>
+                                    <td>Favorise précision, évite malentendus, renforce coopération</td>
+                                </tr>
+                                <tr>
+                                    <td>Après un aveu ou feedback sensible</td>
+                                    <td>5-7 secondes</td>
+                                    <td>"Merci de partager cela" puis "Comment avancer ?"</td>
+                                    <td>Bâtit confiance, corrige erreurs prédictives négatives</td>
+                                </tr>
+                                <tr>
+                                    <td>En fin de phrase pour emphase</td>
+                                    <td>1-3 secondes</td>
+                                    <td>"Et vous ?" ou question ouverte</td>
+                                    <td>Crée rythme naturel, évite surcharge, dissipe tensions</td>
+                                </tr>
+                                <tr>
+                                    <td>Silence prolongé inattendu</td>
+                                    <td>Adapter (max 10s)</td>
+                                    <td>"Êtes-vous toujours là ?" ou relancer sujet</td>
+                                    <td>Maintient flux, réduit anxiété, optimise sécurité relationnelle</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Récapitulatif neuro -->
+                    <div class="result-card" style="margin-top: 36px;">
+                        <div class="result-arrow">🎯</div>
+                        <div class="result-content">
+                            <div class="result-label">SYNTHÈSE NEUROLOGIQUE</div>
+                            <div class="result-text">Voix stable + ton descendant + silences dosés = activation vagale, réduction de l'énergie libre, coopération mutuelle.</div>
+                            <div class="result-sub">La voix devient un outil de sécurité relationnelle, pas seulement de communication.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 4: INDICES D'INCOMPÉTENCE -->
                 <div id="auto-indices" class="protocole-section">
                     <div class="sh-mini">
-                        <div class="sh-mini-num">05</div>
+                        <div class="sh-mini-num">04</div>
                         <div class="sh-mini-content">
                             <div class="sh-mini-tag">Heuristiques sociales rapides</div>
                             <div class="sh-mini-title">Indices perçus comme <em>signes d'incompétence</em></div>
@@ -5668,10 +5662,10 @@
                     </div>
                 </div>
 
-                <!-- SECTION 6: CORRECTEURS ≤5s (copié du protocole) -->
+                <!-- SECTION 5: CORRECTEURS ≤5s -->
                 <div id="auto-correcteurs" class="protocole-section">
                     <div class="sh-mini">
-                        <div class="sh-mini-num">06</div>
+                        <div class="sh-mini-num">05</div>
                         <div class="sh-mini-content">
                             <div class="sh-mini-tag">Correction d'erreur prédictive</div>
                             <div class="sh-mini-title">8 correcteurs de perception <em>en moins de 5 secondes</em></div>
@@ -5872,7 +5866,6 @@
                 </div>
             </div>
         </div>
-        <!-- PROFILS -->
         <!-- PROFILS - VERSION AMÉLIORÉE AVEC GRILLE ESTHÉTIQUE -->
         <div id="profils" class="screen">
             <div class="page">
@@ -7424,6 +7417,7 @@
             if (sectionId === 'etapes') targetId = 'auto-etapes';
             else if (sectionId === 'visages') targetId = 'auto-visages';
             else if (sectionId === 'signaux') targetId = 'auto-signaux';
+            else if (sectionId === 'voix') targetId = 'auto-voix';
             else if (sectionId === 'indices') targetId = 'auto-indices';
             else if (sectionId === 'correcteurs') targetId = 'auto-correcteurs';
 
@@ -8776,32 +8770,6 @@ function navigateProfil(direction) {
     
     showProfilDetail(newIndex);
 } 
-function showAutoRegSection(sectionId, btn) {
-    // Masquer toutes les sections
-    document.querySelectorAll('#autoregulation .protocole-section').forEach(section => {
-        section.classList.remove('active');
-    });
-
-    // Désactiver tous les boutons
-    document.querySelectorAll('#autoregulation .protocole-tab').forEach(tab => {
-        tab.classList.remove('active');
-    });
-
-    // Afficher la section correspondante
-    let targetId = '';
-    if (sectionId === 'etapes') targetId = 'auto-etapes';
-    else if (sectionId === 'visages') targetId = 'auto-visages';
-    else if (sectionId === 'voix') targetId = 'auto-voix';    // <-- AJOUTER CETTE LIGNE
-    else if (sectionId === 'signaux') targetId = 'auto-signaux';
-    else if (sectionId === 'indices') targetId = 'auto-indices';
-    else if (sectionId === 'correcteurs') targetId = 'auto-correcteurs';
-
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-        targetElement.classList.add('active');
-    }
-    if (btn) btn.classList.add('active');
-}
 
 function displayProfilContent(index) {
     const p = profils[index];
