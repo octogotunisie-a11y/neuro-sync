@@ -5866,17 +5866,19 @@
                 </div>
             </div>
         </div>
-        <!-- PROFILS - VERSION AMÉLIORÉE AVEC GRILLE ESTHÉTIQUE -->
+
+        <!-- PROFILS - VERSION CORRIGÉE AVEC FORMAT CARRÉ 1024×1024 -->
         <div id="profils" class="screen">
             <div class="page">
-                <div class="sh">
-                    <div class="sh-eyebrow">TYPOLOGIE</div>
-                    <h2 class="sh-title">8 profils prototypaux</h2>
-                    <p class="sh-sub">Découvrez les 8 profils relationnels. Cliquez sur une image pour explorer les caractéristiques détaillées.</p>
+                <!-- EN-TÊTE - Correction explicite pour garantir l'affichage -->
+                <div class="sh" style="display: block; margin-bottom: 48px; opacity: 1; visibility: visible;">
+                    <div class="sh-eyebrow" style="display: flex; margin-bottom: 12px;">TYPOLOGIE</div>
+                    <h2 class="sh-title" style="display: block; font-size: 48px;">8 profils prototypaux</h2>
+                    <p class="sh-sub" style="display: block;">Découvrez les 8 profils relationnels. Cliquez sur une image pour explorer les caractéristiques détaillées.</p>
                 </div>
 
                 <!-- Vue grille d'images (visible par défaut) -->
-                <div id="profils-grid-view" style="display: block;">
+                <div id="profils-grid-view" style="display: block; width: 100%;">
                     <!-- Introduction à la grille -->
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; background: var(--bg-soft); padding: 20px 30px; border-radius: var(--radius-full);">
                         <div style="display: flex; align-items: center; gap: 15px;">
@@ -5898,156 +5900,161 @@
                         </div>
                     </div>
 
-                    <!-- Grille d'images améliorée -->
+                    <!-- Grille d'images - FORMAT CARRÉ 1:1 POUR LES IMAGES 1024×1024 -->
                     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; margin: 30px 0;">
                         <!-- P1 - Protecteur -->
-                        <div class="profil-card" onclick="showProfilDetail(0)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 3/2; background: var(--bg-soft); border: 3px solid transparent; transform: translateY(0);">
+                        <div class="profil-card p1" onclick="showProfilDetail(0)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 1/1; background: var(--bg-soft); border: 3px solid transparent;">
                             <img src="images/p1.jpeg" alt="P1 Protecteur" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.6s ease;">
                             <!-- Overlay avec dégradé -->
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 40%, transparent 60%);"></div>
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 60%); pointer-events: none;"></div>
                             <!-- Badge P1 en haut à gauche -->
-                            <div style="position: absolute; top: 15px; left: 15px; background: var(--primary); color: white; padding: 5px 15px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3);">P1 · Protecteur</div>
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--primary); color: white; padding: 6px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); z-index: 10;">P1 · Protecteur</div>
                             <!-- Numéro en cercle -->
-                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--primary);">1</div>
+                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--primary); z-index: 10;">1</div>
                             <!-- Titre en bas -->
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white;">
-                                <div style="font-size: 22px; font-weight: 700; font-family: var(--font-display); margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Protecteur</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white; z-index: 10; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <div style="font-size: 13px; opacity: 0.9; display: flex; align-items: center; gap: 5px;">
                                     <span style="background: var(--primary); width: 8px; height: 8px; border-radius: 50%;"></span> Défend son territoire
                                 </div>
                             </div>
-                            <!-- Effet de survol -->
-                            <div style="position: absolute; inset: 0; background: var(--primary); opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" class="hover-overlay"></div>
-                            <style>
-                                .profil-card:hover {
-                                    transform: translateY(-10px) scale(1.02);
-                                    border-color: var(--primary);
-                                }
-                                
-                                .profil-card:hover img {
-                                    transform: scale(1.1);
-                                }
-                                
-                                .profil-card:hover .hover-overlay {
-                                    opacity: 0.1;
-                                }
-                            </style>
                         </div>
 
                         <!-- P2 - Méfiant -->
-                        <div class="profil-card" onclick="showProfilDetail(1)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 3/2; background: var(--bg-soft); border: 3px solid transparent;">
+                        <div class="profil-card p2" onclick="showProfilDetail(1)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 1/1; background: var(--bg-soft); border: 3px solid transparent;">
                             <img src="images/p2.jpeg" alt="P2 Méfiant" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.6s ease;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 40%, transparent 60%);"></div>
-                            <div style="position: absolute; top: 15px; left: 15px; background: var(--secondary); color: white; padding: 5px 15px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md);">P2 · Méfiant</div>
-                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--secondary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--secondary);">2</div>
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white;">
-                                <div style="font-size: 22px; font-weight: 700; font-family: var(--font-display); margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Méfiant</div>
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 60%); pointer-events: none;"></div>
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--secondary); color: white; padding: 6px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); z-index: 10;">P2 · Méfiant</div>
+                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--secondary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--secondary); z-index: 10;">2</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white; z-index: 10; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <div style="font-size: 13px; opacity: 0.9; display: flex; align-items: center; gap: 5px;">
                                     <span style="background: var(--secondary); width: 8px; height: 8px; border-radius: 50%;"></span> Cherche validation
                                 </div>
                             </div>
-                            <div style="position: absolute; inset: 0; background: var(--secondary); opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" class="hover-overlay"></div>
-                            <style>
-                                .profil-card[onclick*="1"]:hover {
-                                    border-color: var(--secondary);
-                                }
-                                
-                                .profil-card[onclick*="1"]:hover .hover-overlay {
-                                    opacity: 0.1;
-                                }
-                            </style>
                         </div>
 
                         <!-- P3 - Désengagé -->
-                        <div class="profil-card" onclick="showProfilDetail(2)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 3/2; background: var(--bg-soft); border: 3px solid transparent;">
+                        <div class="profil-card p3" onclick="showProfilDetail(2)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 1/1; background: var(--bg-soft); border: 3px solid transparent;">
                             <img src="images/p3.jpeg" alt="P3 Désengagé" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.6s ease;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 40%, transparent 60%);"></div>
-                            <div style="position: absolute; top: 15px; left: 15px; background: var(--accent-1); color: white; padding: 5px 15px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md);">P3 · Désengagé</div>
-                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--accent-1); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--accent-1);">3</div>
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white;">
-                                <div style="font-size: 22px; font-weight: 700; font-family: var(--font-display); margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Désengagé</div>
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 60%); pointer-events: none;"></div>
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--accent-1); color: white; padding: 6px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); z-index: 10;">P3 · Désengagé</div>
+                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--accent-1); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--accent-1); z-index: 10;">3</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white; z-index: 10; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <div style="font-size: 13px; opacity: 0.9; display: flex; align-items: center; gap: 5px;">
                                     <span style="background: var(--accent-1); width: 8px; height: 8px; border-radius: 50%;"></span> Se retire
                                 </div>
                             </div>
-                            <div style="position: absolute; inset: 0; background: var(--accent-1); opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" class="hover-overlay"></div>
                         </div>
 
                         <!-- P4 - Statut -->
-                        <div class="profil-card" onclick="showProfilDetail(3)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 3/2; background: var(--bg-soft); border: 3px solid transparent;">
+                        <div class="profil-card p4" onclick="showProfilDetail(3)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 1/1; background: var(--bg-soft); border: 3px solid transparent;">
                             <img src="images/p4.jpeg" alt="P4 Statut" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.6s ease;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 40%, transparent 60%);"></div>
-                            <div style="position: absolute; top: 15px; left: 15px; background: var(--accent-2); color: white; padding: 5px 15px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md);">P4 · Statut</div>
-                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--accent-2); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--accent-2);">4</div>
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white;">
-                                <div style="font-size: 22px; font-weight: 700; font-family: var(--font-display); margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Statut</div>
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 60%); pointer-events: none;"></div>
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--accent-2); color: white; padding: 6px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); z-index: 10;">P4 · Statut</div>
+                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--accent-2); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--accent-2); z-index: 10;">4</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white; z-index: 10; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <div style="font-size: 13px; opacity: 0.9; display: flex; align-items: center; gap: 5px;">
                                     <span style="background: var(--accent-2); width: 8px; height: 8px; border-radius: 50%;"></span> Protège son image
                                 </div>
                             </div>
-                            <div style="position: absolute; inset: 0; background: var(--accent-2); opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" class="hover-overlay"></div>
                         </div>
 
                         <!-- P5 - Réactif -->
-                        <div class="profil-card" onclick="showProfilDetail(4)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 3/2; background: var(--bg-soft); border: 3px solid transparent;">
+                        <div class="profil-card p5" onclick="showProfilDetail(4)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 1/1; background: var(--bg-soft); border: 3px solid transparent;">
                             <img src="images/p5.jpeg" alt="P5 Réactif" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.6s ease;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 40%, transparent 60%);"></div>
-                            <div style="position: absolute; top: 15px; left: 15px; background: #ff8a7a; color: white; padding: 5px 15px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md);">P5 · Réactif</div>
-                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: #ff8a7a; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid #ff8a7a;">5</div>
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white;">
-                                <div style="font-size: 22px; font-weight: 700; font-family: var(--font-display); margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Réactif</div>
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 60%); pointer-events: none;"></div>
+                            <div style="position: absolute; top: 15px; left: 15px; background: #ff8a7a; color: white; padding: 6px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); z-index: 10;">P5 · Réactif</div>
+                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: #ff8a7a; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid #ff8a7a; z-index: 10;">5</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white; z-index: 10; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <div style="font-size: 13px; opacity: 0.9; display: flex; align-items: center; gap: 5px;">
                                     <span style="background: #ff8a7a; width: 8px; height: 8px; border-radius: 50%;"></span> Explose à chaud
                                 </div>
                             </div>
-                            <div style="position: absolute; inset: 0; background: #ff8a7a; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" class="hover-overlay"></div>
                         </div>
 
                         <!-- P6 - Engagé -->
-                        <div class="profil-card" onclick="showProfilDetail(5)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 3/2; background: var(--bg-soft); border: 3px solid transparent;">
+                        <div class="profil-card p6" onclick="showProfilDetail(5)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 1/1; background: var(--bg-soft); border: 3px solid transparent;">
                             <img src="images/p6.jpeg" alt="P6 Engagé" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.6s ease;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 40%, transparent 60%);"></div>
-                            <div style="position: absolute; top: 15px; left: 15px; background: var(--accent-3); color: white; padding: 5px 15px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md);">P6 · Engagé</div>
-                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--accent-3); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--accent-3);">6</div>
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white;">
-                                <div style="font-size: 22px; font-weight: 700; font-family: var(--font-display); margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Engagé</div>
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 60%); pointer-events: none;"></div>
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--accent-3); color: white; padding: 6px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); z-index: 10;">P6 · Engagé</div>
+                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: var(--accent-3); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid var(--accent-3); z-index: 10;">6</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white; z-index: 10; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <div style="font-size: 13px; opacity: 0.9; display: flex; align-items: center; gap: 5px;">
                                     <span style="background: var(--accent-3); width: 8px; height: 8px; border-radius: 50%;"></span> Coopère
                                 </div>
                             </div>
-                            <div style="position: absolute; inset: 0; background: var(--accent-3); opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" class="hover-overlay"></div>
                         </div>
 
                         <!-- P7 - Surmené -->
-                        <div class="profil-card" onclick="showProfilDetail(6)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 3/2; background: var(--bg-soft); border: 3px solid transparent;">
+                        <div class="profil-card p7" onclick="showProfilDetail(6)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 1/1; background: var(--bg-soft); border: 3px solid transparent;">
                             <img src="images/p7.jpeg" alt="P7 Surmené" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.6s ease;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 40%, transparent 60%);"></div>
-                            <div style="position: absolute; top: 15px; left: 15px; background: #9a9389; color: white; padding: 5px 15px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md);">P7 · Surmené</div>
-                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: #9a9389; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid #9a9389;">7</div>
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white;">
-                                <div style="font-size: 22px; font-weight: 700; font-family: var(--font-display); margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Surmené</div>
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 60%); pointer-events: none;"></div>
+                            <div style="position: absolute; top: 15px; left: 15px; background: #9a9389; color: white; padding: 6px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); z-index: 10;">P7 · Surmené</div>
+                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: #9a9389; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid #9a9389; z-index: 10;">7</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white; z-index: 10; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <div style="font-size: 13px; opacity: 0.9; display: flex; align-items: center; gap: 5px;">
                                     <span style="background: #9a9389; width: 8px; height: 8px; border-radius: 50%;"></span> Épuisé
                                 </div>
                             </div>
-                            <div style="position: absolute; inset: 0; background: #9a9389; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" class="hover-overlay"></div>
                         </div>
 
                         <!-- P8 - Stratège -->
-                        <div class="profil-card" onclick="showProfilDetail(7)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 3/2; background: var(--bg-soft); border: 3px solid transparent;">
+                        <div class="profil-card p8" onclick="showProfilDetail(7)" style="cursor: pointer; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); aspect-ratio: 1/1; background: var(--bg-soft); border: 3px solid transparent;">
                             <img src="images/p8.jpeg" alt="P8 Stratège" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.6s ease;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 40%, transparent 60%);"></div>
-                            <div style="position: absolute; top: 15px; left: 15px; background: #b088ff; color: white; padding: 5px 15px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md);">P8 · Stratège</div>
-                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: #b088ff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid #b088ff;">8</div>
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white;">
-                                <div style="font-size: 22px; font-weight: 700; font-family: var(--font-display); margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Stratège</div>
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 60%); pointer-events: none;"></div>
+                            <div style="position: absolute; top: 15px; left: 15px; background: #b088ff; color: white; padding: 6px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 14px; box-shadow: var(--shadow-md); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.3); z-index: 10;">P8 · Stratège</div>
+                            <div style="position: absolute; top: 15px; right: 15px; background: white; color: #b088ff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; box-shadow: var(--shadow-lg); border: 2px solid #b088ff; z-index: 10;">8</div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 15px 20px; color: white; z-index: 10; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                                 <div style="font-size: 13px; opacity: 0.9; display: flex; align-items: center; gap: 5px;">
                                     <span style="background: #b088ff; width: 8px; height: 8px; border-radius: 50%;"></span> Joue en coulisses
                                 </div>
                             </div>
-                            <div style="position: absolute; inset: 0; background: #b088ff; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;" class="hover-overlay"></div>
                         </div>
                     </div>
+
+                    <!-- Style pour les effets de survol -->
+                    <style>
+                        .profil-card:hover {
+                            transform: translateY(-10px) scale(1.02);
+                            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+                            z-index: 10;
+                        }
+                        
+                        .profil-card:hover img {
+                            transform: scale(1.1);
+                        }
+                        
+                        .profil-card.p1:hover {
+                            border-color: var(--primary);
+                        }
+                        
+                        .profil-card.p2:hover {
+                            border-color: var(--secondary);
+                        }
+                        
+                        .profil-card.p3:hover {
+                            border-color: var(--accent-1);
+                        }
+                        
+                        .profil-card.p4:hover {
+                            border-color: var(--accent-2);
+                        }
+                        
+                        .profil-card.p5:hover {
+                            border-color: #ff8a7a;
+                        }
+                        
+                        .profil-card.p6:hover {
+                            border-color: var(--accent-3);
+                        }
+                        
+                        .profil-card.p7:hover {
+                            border-color: #9a9389;
+                        }
+                        
+                        .profil-card.p8:hover {
+                            border-color: #b088ff;
+                        }
+                    </style>
 
                     <!-- Légende et informations complémentaires -->
                     <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 25px; margin-top: 40px; background: var(--bg-card); border-radius: var(--radius-lg); padding: 30px; border: 1px solid var(--border); box-shadow: var(--shadow-md);">
@@ -6100,7 +6107,6 @@
                             <div style="font-family: var(--font-mono); color: var(--text-muted); font-size: 14px;" id="currentProfilIndicator">Profil P1</div>
                         </div>
                         <div style="width: 100px;"></div>
-                        <!-- Espace pour équilibrer -->
                     </div>
 
                     <!-- Conteneur pour afficher le détail du profil sélectionné -->
@@ -8777,15 +8783,15 @@ function displayProfilContent(index) {
     
     document.getElementById('profilDetail').innerHTML = `
         <div class="profile-card" style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden;">
-            <!-- En-tête avec image et titre -->
+            <!-- En-tête avec image et titre - IMAGE EN FORMAT CARRÉ 1:1 -->
             <div style="display: grid; grid-template-columns: 400px 1fr; gap: 30px; margin-bottom: 30px; background: linear-gradient(135deg, ${p.color}20, transparent); padding: 30px; border-radius: var(--radius-lg);">
-                <!-- Image du profil - adaptée pour 1536x1024 -->
-                <div style="border-radius: var(--radius-lg); overflow: hidden; border: 4px solid ${p.color}; box-shadow: var(--shadow-lg); aspect-ratio: 3/2; background: var(--bg-soft);">
+                <!-- Image du profil - format carré 1:1 (1024×1024) -->
+                <div style="border-radius: var(--radius-lg); overflow: hidden; border: 4px solid ${p.color}; box-shadow: var(--shadow-lg); aspect-ratio: 1/1; background: var(--bg-soft);">
                     <img src="${p.image}" alt="${p.name}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                 </div>
                 
                 <!-- Titre et code -->
-                <div>
+                <div style="display: flex; flex-direction: column; justify-content: center;">
                     <div style="font-family: var(--font-mono); font-size: 18px; color: ${p.color}; font-weight: 600; margin-bottom: 10px;">${p.code}</div>
                     <div style="font-size: 42px; font-weight: 700; font-family: var(--font-display); margin-bottom: 15px; line-height: 1.2;">${p.name}</div>
                     <div style="font-size: 18px; color: var(--text-muted); margin-bottom: 20px;">${p.desc}</div>
